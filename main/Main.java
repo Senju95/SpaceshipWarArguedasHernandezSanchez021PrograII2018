@@ -1,6 +1,7 @@
 package main;
 
-import frontend.GameArea;
+
+import frontend.MainFrame;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public class Main {
@@ -13,15 +14,14 @@ public class Main {
                     break;
                 }
             }
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new MainFrame().setVisible(true);
+                }
+            });
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             System.out.println(ex.getMessage());
         }
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new GameArea().setVisible(true);
-            }
-        });
     }
 
 }

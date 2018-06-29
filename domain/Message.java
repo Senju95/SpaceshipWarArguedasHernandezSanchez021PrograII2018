@@ -11,7 +11,7 @@ public class Message {
         this.sender = emisor.getName();
     }
     
-    public Message() {
+    public Message(){
         this.message = "";
         this.reciever = "";
         this.sender = "";
